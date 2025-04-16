@@ -19,10 +19,10 @@ if (!getApps().length) {
   })
 }
 
-export const adminApp = initializeApp({
-  credential: firebaseCert,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-})
+// export const adminApp = initializeApp({
+//   credential: firebaseCert,
+//   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+// })
 
 export const db = getFirestore()
 // export const storage = getStorage().bucket()
