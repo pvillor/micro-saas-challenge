@@ -1,10 +1,12 @@
-import { mpClient } from '@/app/lib/mercado-pago'
+import { mpClient, validateMercadoPagoWebhook } from '@/app/lib/mercado-pago'
 import { handleMercadoPagoPayment } from '@/app/server/mercado-pago/handle-payment'
 import { Payment } from 'mercadopago'
 import { type NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   try {
+    validateMercadoPagoWebhook(req)
+
     const body = await req.json()
 
     const { data, type } = body

@@ -6,7 +6,7 @@ export const mpClient = new MercadoPagoConfig({
   accessToken: process.env.MERCADO_PAGO_ACCESS_TOKEN as string,
 })
 
-export function validateMercadoPagoWehook(req: NextRequest) {
+export function validateMercadoPagoWebhook(req: NextRequest) {
   const xSignature = req.headers.get('x-signature')
   const xRequestId = req.headers.get('x-request-id')
 

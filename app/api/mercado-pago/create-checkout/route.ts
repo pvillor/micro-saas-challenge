@@ -1,6 +1,5 @@
 import { mpClient } from '@/app/lib/mercado-pago'
 import { Preference } from 'mercadopago'
-import { init } from 'next/dist/compiled/webpack/webpack'
 import { type NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
