@@ -14,6 +14,7 @@ export async function POST(req: NextRequest) {
         external_reference: testId,
         metadata: {
           testId, // test_id
+          userEmail,
         },
         ...(userEmail && { payer: { email: userEmail } }),
         items: [
